@@ -1,0 +1,106 @@
+/* ========== Import Professional Font ========== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* ========== Global Theme ========== */
+body, .stApp {
+    background: linear-gradient(180deg, #1e1e2f 10%, #1a759f 100%);
+    color: #e0e0e0;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+/* App container */
+[data-testid="stAppViewContainer"] {
+    background: transparent;  /* Allow gradient from body to show */
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #2a2a40;
+    color: #e0e0e0;
+    border-right: 1px solid #33334d;
+}
+
+[data-testid="stSidebar"] label {
+    color: #c0c0c0;
+}
+
+/* Header (Top Navbar) */
+header[data-testid="stHeader"] {
+    background-color: #1e1e2f;
+}
+
+header[data-testid="stHeader"]::before {
+    background: none;
+}
+
+/* Markdown and text blocks */
+.block-container {
+    color: #e0e0e0;
+}
+
+/* Input fields */
+input, textarea, .stTextInput > div > input {
+    background-color: #2b2b3d !important;
+    color: #f0f0f0 !important;
+    border: 1px solid #44445c !important;
+    border-radius: 6px;
+    padding: 0.5rem;
+    transition: border 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border: 1px solid #6c63ff !important;
+    outline: none;
+}
+
+/* Input Labels */
+label {
+    color: #cccccc !important;
+}
+
+/* ========== Buttons (All) ========== */
+button,
+.stButton > button,
+[data-testid="baseButton-primary"],
+button:has(svg),
+button:has(span) {
+    background-color: #1a759f !important;  /* Darker muted purple */
+    color: #ffffff !important;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    padding: 0.45rem 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover */
+button:hover,
+.stButton > button:hover,
+[data-testid="baseButton-primary"]:hover {
+    background-color: #483cab !important;  /* Slightly darker on hover */
+    transform: scale(1.02);
+}
+
+/* Button Focus */
+button:focus {
+    outline: 2px solid #786df4 !important;
+    outline-offset: 2px;
+}
+
+/* Alerts (warnings, errors) */
+.stAlert {
+    background-color: #32324a;
+    color: #ffffff;
+    border-left: 4px solid #6c63ff;
+}
+
+/* Footer (optional) */
+footer {
+    visibility: hidden;
+}
+
+.stDecoration {
+    visibility: hidden;
+}
